@@ -198,6 +198,8 @@ theory:
     path: ./external_modules/code/CAMB
     use_renames: True
     extra_args:
+      lmax: 4000
+      lens_margin: 1250
       halofit_version: halofit_mead2020
       AccuracyBoost: 1.15
       lens_potential_accuracy: 3
