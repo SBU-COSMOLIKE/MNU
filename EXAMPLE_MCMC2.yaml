@@ -200,7 +200,7 @@ theory:
     extra_args:
       lmax: 4000
       lens_margin: 1250
-      halofit_version: halofit_mead2020
+      halofit_version: mead2020
       AccuracyBoost: 1.15
       lens_potential_accuracy: 3
       num_massive_neutrinos: 1
@@ -264,4 +264,4 @@ sampler:
     # ---------------------------------------------------------------------
     Rminus1_single_split: 4
 
-output: ./projects/example/chains/EXAMPLE_MCMC2
+output: ./projects/mnu/chains/EXAMPLE_MCMC2
