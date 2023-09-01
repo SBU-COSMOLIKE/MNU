@@ -24,7 +24,7 @@ likelihood:
     SPT3G_2018_TTTEEE_spectra_to_fit_bin_max : "44 44 44 44 44 44 44 44 44 44 44 44"
   planck_2018_lensing.clik:
     path: ./external_modules
-    clik_file: baseline/plc_3.0/lensing/smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8.clik_lensing
+    clik_file: plc_3.0/lensing/smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8.clik_lensing
 
 params:
   logA:
