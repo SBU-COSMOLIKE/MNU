@@ -202,8 +202,9 @@ theory:
     path: ./external_modules/code/CAMB
     use_renames: True
     extra_args:
-      AccuracyBoost: 1.10
-      lens_potential_accuracy: 2
+      halofit_version: halofit_mead2020
+      AccuracyBoost: 1.15
+      lens_potential_accuracy: 3
       num_massive_neutrinos: 1
       nnu: 3.046
       dark_energy_model: ppf
