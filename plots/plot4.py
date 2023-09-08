@@ -73,7 +73,8 @@ samples.saveAsText(chaindir + '/.VM_P4_TMP3')
 #GET DIST PLOT SETUP
 g = gplot.get_single_plotter(
   chain_dir=chaindir,
-  analysis_settings=analysissettings2,width_inch=5.0
+  analysis_settings=analysissettings2,
+  width_inch=5.3
 )
 
 g.settings.axis_tick_x_rotation=65
@@ -81,11 +82,11 @@ g.settings.lw_contour = 1.2
 g.settings.legend_rect_border = False
 g.settings.figure_legend_frame = False
 g.settings.axes_fontsize = 13.0
-g.settings.legend_fontsize = 9.0
+g.settings.legend_fontsize = 11.0
 g.settings.alpha_filled_add = 0.85
 g.settings.lab_fontsize=15.5
 g.legend_labels=False
-g.title_limit_labels=False
+g.settings.constrained_layout=True
 
 g.plots_1d(
   [ 
@@ -113,11 +114,13 @@ g.finish_plot(
 )
 
 g.add_text('Planck low-$\\ell$ TTEE and high-$\\ell$ EE and $\\phi\\phi$ + BAO + SN + SPT-3G TTTEEE', 
-  x=0.03, 
+  x=0.015, 
   y=0.95,
-  fontsize=11,
+  fontsize=7.5,
   horizontalalignment='left'
 )
 
+ax = g.get_axes()
+ax.set_xlim(0.06,0.7)
 g.export()
 
