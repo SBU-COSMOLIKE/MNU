@@ -7,7 +7,7 @@
 #SBATCH --ntasks-per-node=4
 #SBATCH --ntasks-per-socket=2
 #SBATCH --cpus-per-task=4
-#SBATCH --time=60:00:00
+#SBATCH --time=120:00:00
 #SBATCH --partition=standard
 #SBATCH --account=cosmolike
 

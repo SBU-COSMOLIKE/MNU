@@ -25,6 +25,10 @@ likelihood:
     lmax: 4000
 
 params:
+  yp2:
+    prior:
+      min: 0.9
+      max: 1.1
   logA:
     prior:
       min: 1.61
