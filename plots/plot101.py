@@ -37,15 +37,15 @@ analysissettings2={'smooth_scale_1D':0.35,'smooth_scale_2D':0.35,'ignore_rows': 
 'range_confidence' : u'0.01'}
 
 root_chains = (
-  'EXAMPLE_MCMC1',
-  'EXAMPLE_MCMC2',
-  'EXAMPLE_MCMC3',
-  'EXAMPLE_MCMC4',
-  'EXAMPLE_MCMC5',
-  'EXAMPLE_MCMC6',
-  'EXAMPLE_MCMC7',
-  'EXAMPLE_MCMC8',
-  'EXAMPLE_MCMC9'
+  'EXAMPLE_MCMC10',
+  'EXAMPLE_MCMC11',
+  'EXAMPLE_MCMC12',
+  'EXAMPLE_MCMC13',
+  'EXAMPLE_MCMC14',
+  'EXAMPLE_MCMC15',
+  'EXAMPLE_MCMC16',
+  'EXAMPLE_MCMC17',
+  'EXAMPLE_MCMC18'
 )
 
 num_points_thin = 50000
@@ -58,7 +58,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP1')
+samples.saveAsText(chaindir + '/.VM_P101_TMP1')
 
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[0],settings=analysissettings)
 stats = samples.getMargeStats()
@@ -73,7 +73,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP2')
+samples.saveAsText(chaindir + '/.VM_P101_TMP2')
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[2],settings=analysissettings)
 samples.thin(factor = int(np.sum(samples.weights)/num_points_thin))
@@ -81,7 +81,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP3')
+samples.saveAsText(chaindir + '/.VM_P101_TMP3')
 # --------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[3],settings=analysissettings)
@@ -90,7 +90,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP4')
+samples.saveAsText(chaindir + '/.VM_P101_TMP4')
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[4],settings=analysissettings)
 samples.thin(factor = int(np.sum(samples.weights)/num_points_thin))
@@ -98,7 +98,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP5')
+samples.saveAsText(chaindir + '/.VM_P101_TMP5')
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[5],settings=analysissettings)
 samples.thin(factor = int(np.sum(samples.weights)/num_points_thin))
@@ -106,7 +106,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP6')
+samples.saveAsText(chaindir + '/.VM_P101_TMP6')
 # --------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[6],settings=analysissettings)
@@ -115,7 +115,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP7')
+samples.saveAsText(chaindir + '/.VM_P101_TMP7')
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[7],settings=analysissettings)
 samples.thin(factor = int(np.sum(samples.weights)/num_points_thin))
@@ -123,7 +123,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP8')
+samples.saveAsText(chaindir + '/.VM_P101_TMP8')
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[8],settings=analysissettings)
 samples.thin(factor = int(np.sum(samples.weights)/num_points_thin))
@@ -131,7 +131,7 @@ p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
-samples.saveAsText(chaindir + '/.VM_P100_TMP9')
+samples.saveAsText(chaindir + '/.VM_P101_TMP9')
 # --------------------------------------------------------------------------------
 
 #GET DIST PLOT SETUP
@@ -154,12 +154,12 @@ g.settings.constrained_layout=True
 
 g.plots_1d(
   [ 
-    chaindir + '/.VM_P100_TMP1', 
-    chaindir + '/.VM_P100_TMP4', 
-    chaindir + '/.VM_P100_TMP7', 
-    chaindir + '/.VM_P100_TMP3',
-    chaindir + '/.VM_P100_TMP6',
-    chaindir + '/.VM_P100_TMP9'
+    chaindir + '/.VM_P101_TMP1', 
+    chaindir + '/.VM_P101_TMP4', 
+    chaindir + '/.VM_P101_TMP7', 
+    chaindir + '/.VM_P101_TMP3',
+    chaindir + '/.VM_P101_TMP6',
+    chaindir + '/.VM_P101_TMP9'
   ],
   params=[u'mnu2'],
   line_args=[
@@ -190,11 +190,11 @@ ax = g.get_axes()
 ax.set_xlim(0.06,0.7)
 
 # --------------------------------------------------------------------------------
-samples        = loadMCSamples(chaindir + '/.VM_P100_TMP3',settings=analysissettings2)
+samples        = loadMCSamples(chaindir + '/.VM_P101_TMP3',settings=analysissettings2)
 stats          = samples.getMargeStats()
 sampleAnalyser = gplot.MCSampleAnalysis(chaindir,settings=analysissettings2)
 lims           = stats.parWithName('mnu2').limits
-density        = sampleAnalyser.get_density(chaindir + '/.VM_P100_TMP3', param='mnu2')
+density        = sampleAnalyser.get_density(chaindir + '/.VM_P101_TMP3', param='mnu2')
 
 tmp0 = []
 tmp1 = []
@@ -204,11 +204,11 @@ for i in range(0,len(density.x)) :
     tmp1.append(density.P[i])
 plt.gca().fill_between(tmp0, 0, tmp1, facecolor='indigo',alpha=0.25) 
 # --------------------------------------------------------------------------------
-samples        = loadMCSamples(chaindir + '/.VM_P100_TMP6',settings=analysissettings2)
+samples        = loadMCSamples(chaindir + '/.VM_P101_TMP6',settings=analysissettings2)
 stats          = samples.getMargeStats()
 sampleAnalyser = gplot.MCSampleAnalysis(chaindir,settings=analysissettings2)
 lims           = stats.parWithName('mnu2').limits
-density        = sampleAnalyser.get_density(chaindir + '/.VM_P100_TMP6', param='mnu2')
+density        = sampleAnalyser.get_density(chaindir + '/.VM_P101_TMP6', param='mnu2')
 
 tmp0 = []
 tmp1 = []
@@ -218,11 +218,11 @@ for i in range(0,len(density.x)) :
     tmp1.append(density.P[i])
 plt.gca().fill_between(tmp0, 0, tmp1, facecolor='indigo',alpha=0.25) 
 # --------------------------------------------------------------------------------
-samples        = loadMCSamples(chaindir + '/.VM_P100_TMP9',settings=analysissettings2)
+samples        = loadMCSamples(chaindir + '/.VM_P101_TMP9',settings=analysissettings2)
 stats          = samples.getMargeStats()
 sampleAnalyser = gplot.MCSampleAnalysis(chaindir,settings=analysissettings2)
 lims           = stats.parWithName('mnu2').limits
-density        = sampleAnalyser.get_density(chaindir + '/.VM_P100_TMP9', param='mnu2')
+density        = sampleAnalyser.get_density(chaindir + '/.VM_P101_TMP9', param='mnu2')
 
 tmp0 = []
 tmp1 = []
@@ -232,11 +232,11 @@ for i in range(0,len(density.x)) :
     tmp1.append(density.P[i])
 plt.gca().fill_between(tmp0, 0, tmp1, facecolor='indigo',alpha=0.25) 
 # --------------------------------------------------------------------------------
-samples        = loadMCSamples(chaindir + '/.VM_P100_TMP1',settings=analysissettings2)
+samples        = loadMCSamples(chaindir + '/.VM_P101_TMP1',settings=analysissettings2)
 stats          = samples.getMargeStats()
 sampleAnalyser = gplot.MCSampleAnalysis(chaindir,settings=analysissettings2)
 lims           = stats.parWithName('mnu2').limits
-density        = sampleAnalyser.get_density(chaindir + '/.VM_P100_TMP1', param='mnu2')
+density        = sampleAnalyser.get_density(chaindir + '/.VM_P101_TMP1', param='mnu2')
 
 tmp0 = []
 tmp1 = []
@@ -246,11 +246,11 @@ for i in range(0,len(density.x)) :
     tmp1.append(density.P[i])
 plt.gca().fill_between(tmp0, 0, tmp1, facecolor='lightcoral',alpha=0.5) 
 # --------------------------------------------------------------------------------
-samples        = loadMCSamples(chaindir + '/.VM_P100_TMP4',settings=analysissettings2)
+samples        = loadMCSamples(chaindir + '/.VM_P101_TMP4',settings=analysissettings2)
 stats          = samples.getMargeStats()
 sampleAnalyser = gplot.MCSampleAnalysis(chaindir,settings=analysissettings2)
 lims           = stats.parWithName('mnu2').limits
-density        = sampleAnalyser.get_density(chaindir + '/.VM_P100_TMP4', param='mnu2')
+density        = sampleAnalyser.get_density(chaindir + '/.VM_P101_TMP4', param='mnu2')
 
 tmp0 = []
 tmp1 = []
@@ -260,11 +260,11 @@ for i in range(0,len(density.x)) :
     tmp1.append(density.P[i])
 plt.gca().fill_between(tmp0, 0, tmp1, facecolor='lightcoral',alpha=0.5) 
 # --------------------------------------------------------------------------------
-samples        = loadMCSamples(chaindir + '/.VM_P100_TMP7',settings=analysissettings2)
+samples        = loadMCSamples(chaindir + '/.VM_P101_TMP7',settings=analysissettings2)
 stats          = samples.getMargeStats()
 sampleAnalyser = gplot.MCSampleAnalysis(chaindir,settings=analysissettings2)
 lims           = stats.parWithName('mnu2').limits
-density        = sampleAnalyser.get_density(chaindir + '/.VM_P100_TMP7', param='mnu2')
+density        = sampleAnalyser.get_density(chaindir + '/.VM_P101_TMP7', param='mnu2')
 
 tmp0 = []
 tmp1 = []
