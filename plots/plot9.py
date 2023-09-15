@@ -27,7 +27,6 @@ matplotlib.rcParams['legend.labelspacing'] = 0.77
 matplotlib.rcParams['savefig.bbox'] = 'tight'
 matplotlib.rcParams['savefig.format'] = 'pdf'
 
-parameter = [u'omegam',u'sigma8', u'As_1e9', u'ns', u'SS8', u'omegab', u'H0', u'LSST_A1_1', u'LSST_A1_2']
 chaindir=os.getcwd()
 
 analysissettings={'smooth_scale_1D':0.35,'smooth_scale_2D':0.35,'ignore_rows': u'0.5',

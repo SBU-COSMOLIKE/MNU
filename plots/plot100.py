@@ -27,7 +27,6 @@ matplotlib.rcParams['legend.labelspacing'] = 0.77
 matplotlib.rcParams['savefig.bbox'] = 'tight'
 matplotlib.rcParams['savefig.format'] = 'pdf'
 
-parameter = [u'omegam',u'sigma8', u'As_1e9', u'ns', u'SS8', u'omegab', u'H0', u'LSST_A1_1', u'LSST_A1_2']
 chaindir=os.getcwd()
 
 analysissettings={'smooth_scale_1D':0.35,'smooth_scale_2D':0.35,'ignore_rows': u'0.5',
@@ -59,13 +58,6 @@ samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
 samples.saveAsText(chaindir + '/.VM_P100_TMP1')
-
-samples=loadMCSamples(chaindir + '/../chains/' + root_chains[0],settings=analysissettings)
-stats = samples.getMargeStats()
-sampleAnalyser=gplot.MCSampleAnalysis(chaindir,settings=analysissettings)
-lims1    = stats.parWithName(parameter).limits
-density1 = sampleAnalyser.get_density('.VM_TMP2',param=parameter)
-
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[1],settings=analysissettings)
 samples.thin(factor = int(np.sum(samples.weights)/num_points_thin))

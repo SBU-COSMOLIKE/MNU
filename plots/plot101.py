@@ -27,7 +27,6 @@ matplotlib.rcParams['legend.labelspacing'] = 0.77
 matplotlib.rcParams['savefig.bbox'] = 'tight'
 matplotlib.rcParams['savefig.format'] = 'pdf'
 
-parameter = [u'omegam',u'sigma8', u'As_1e9', u'ns', u'SS8', u'omegab', u'H0', u'LSST_A1_1', u'LSST_A1_2']
 chaindir=os.getcwd()
 
 analysissettings={'smooth_scale_1D':0.35,'smooth_scale_2D':0.35,'ignore_rows': u'0.5',
@@ -50,7 +49,6 @@ root_chains = (
 
 num_points_thin = 50000
 
-
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[0],settings=analysissettings)
 samples.thin(factor = int(np.sum(samples.weights)/num_points_thin))
@@ -59,13 +57,6 @@ samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
 samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
 samples.saveAsText(chaindir + '/.VM_P101_TMP1')
-
-samples=loadMCSamples(chaindir + '/../chains/' + root_chains[0],settings=analysissettings)
-stats = samples.getMargeStats()
-sampleAnalyser=gplot.MCSampleAnalysis(chaindir,settings=analysissettings)
-lims1    = stats.parWithName(parameter).limits
-density1 = sampleAnalyser.get_density('.VM_TMP2',param=parameter)
-
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[1],settings=analysissettings)
 samples.thin(factor = int(np.sum(samples.weights)/num_points_thin))
@@ -134,6 +125,7 @@ samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
 samples.saveAsText(chaindir + '/.VM_P101_TMP9')
 # --------------------------------------------------------------------------------
 
+
 #GET DIST PLOT SETUP
 g = gplot.get_single_plotter(
   chain_dir=chaindir,
@@ -175,15 +167,15 @@ g.plots_1d(
 g.settings.tight_layout=True
 g.finish_plot(
   legend_labels=[
-    '$\\Lambda \\quad \\,\\,\\,$  P1 + SPT TTTEEE',
-    '$\\Lambda \\quad \\,\\,\\,$  P2 + SPT TTTEEE',
-    '$\\Lambda \\quad \\,\\,\\,$  P3 + SPT TTTEEE',
-    '$w_0w_a$ P1 + SPT TTTEEE',
-    '$w_0w_a$ P2 + SPT TTTEEE',
-    '$w_0w_a$ P3 + SPT TTTEEE'
+    '$\\Lambda \\quad \\,\\,\\,$  P1 + SPT TTTEEE + PL $\phi\phi$',
+    '$\\Lambda \\quad \\,\\,\\,$  P2 + SPT TTTEEE + PL $\phi\phi$',
+    '$\\Lambda \\quad \\,\\,\\,$  P3 + SPT TTTEEE + PL $\phi\phi$',
+    '$w_0w_a$ P1 + SPT TTTEEE + PL $\phi\phi$',
+    '$w_0w_a$ P2 + SPT TTTEEE + PL $\phi\phi$',
+    '$w_0w_a$ P3 + SPT TTTEEE + PL $\phi\phi$'
   ],
   no_extra_legend_space=True,
-  legend_loc=(0.6,0.65)
+  legend_loc=(0.52,0.625)
 )
 
 ax = g.get_axes()
