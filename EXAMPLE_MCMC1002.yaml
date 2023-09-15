@@ -42,8 +42,8 @@ likelihood:
   sn.roman_o:
     path: ./external_modules/data/sn_data
   bao.generic:
-    measurements_file: ./external_modules/data/mnu/mock_desi_bao_rs_over_DV_data.txt
-    cov_file: ./external_modules/data/mnu/mock_desi_bao_rs_over_DV_cov.txt
+    measurements_file: ./mnu/mock_desi_bao_rs_over_DV_data.txt
+    cov_file: ./mnu/mock_desi_bao_rs_over_DV_cov.txt
 
 params:
   logA:
@@ -131,7 +131,14 @@ params:
     proposal: 0.003
     latex: \tau_\mathrm{reio}
   w:
-    value: -1.0
+    prior:
+      min: -3
+      max: -0.01
+    ref:
+      dist: norm
+      loc: -0.99
+      scale: 0.05
+    proposal: 0.05
     latex: w_{0,\mathrm{DE}}
   omegal:
     latex: \Omega_\Lambda

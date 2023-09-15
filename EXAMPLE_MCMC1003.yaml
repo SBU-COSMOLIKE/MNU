@@ -42,8 +42,8 @@ likelihood:
   sn.roman_o:
     path: ./external_modules/data/sn_data
   bao.generic:
-    measurements_file: ./external_modules/data/mnu/mock_desi_bao_rs_over_DV_data.txt
-    cov_file: ./external_modules/data/mnu/mock_desi_bao_rs_over_DV_cov.txt
+    measurements_file: ./mnu/mock_desi_bao_rs_over_DV_data.txt
+    cov_file: ./mnu/mock_desi_bao_rs_over_DV_cov.txt
 
 params:
   logA:
