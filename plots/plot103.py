@@ -171,12 +171,12 @@ g.finish_plot(
     '$\\Lambda \\quad \\,\\,\\,$  P1 + ACTDR4 TTTEEE',
     '$\\Lambda \\quad \\,\\,\\,$  P2 + ACTDR4 TTTEEE',
     '$\\Lambda \\quad \\,\\,\\,$  P3 + ACTDR4 TTTEEE',
-    '$w_0w_a$ P1 + SPT TTTEEE',
-    '$w_0w_a$ P2 + SPT TTTEEE',
-    '$w_0w_a$ P3 + SPT TTTEEE'
+    '$w_0w_a$ P1 + ACTDR4 TTTEEE',
+    '$w_0w_a$ P2 + ACTDR4 TTTEEE',
+    '$w_0w_a$ P3 + ACTDR4 TTTEEE'
   ],
   no_extra_legend_space=True,
-  legend_loc=(0.58,0.65)
+  legend_loc=(0.52,0.625)
 )
 
 ax = g.get_axes()

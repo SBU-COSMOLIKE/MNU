@@ -168,15 +168,15 @@ g.plots_1d(
 g.settings.tight_layout=True
 g.finish_plot(
   legend_labels=[
-    '$\\Lambda \\quad \\,\\,\\,$  P1 + ACTDR4 TTTEEE',
-    '$\\Lambda \\quad \\,\\,\\,$  P2 + ACTDR4 TTTEEE',
-    '$\\Lambda \\quad \\,\\,\\,$  P3 + ACTDR4 TTTEEE',
-    '$w_0w_a$ P1 + SPT TTTEEE',
-    '$w_0w_a$ P2 + SPT TTTEEE',
-    '$w_0w_a$ P3 + SPT TTTEEE'
+    '$\\Lambda \\quad \\,\\,\\,$  P1 + ACTDR4 TTTEEE + PL $\phi\phi$',
+    '$\\Lambda \\quad \\,\\,\\,$  P2 + ACTDR4 TTTEEE + PL $\phi\phi$',
+    '$\\Lambda \\quad \\,\\,\\,$  P3 + ACTDR4 TTTEEE + PL $\phi\phi$',
+    '$w_0w_a$ P1 + ACTDR4 TTTEEE + PL $\phi\phi$',
+    '$w_0w_a$ P2 + ACTDR4 TTTEEE + PL $\phi\phi$',
+    '$w_0w_a$ P3 + ACTDR4 TTTEEE + PL $\phi\phi$'
   ],
   no_extra_legend_space=True,
-  legend_loc=(0.58,0.65)
+  legend_loc=(0.47,0.625)
 )
 
 ax = g.get_axes()

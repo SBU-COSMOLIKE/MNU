@@ -125,8 +125,6 @@ samples.addDerived(p.mnu,name='mnu2',label='{\\sum m_\\nu}', range=[0.06,0.7])
 samples.saveAsText(chaindir + '/.VM_P102_TMP9')
 # --------------------------------------------------------------------------------
 
-
-
 #GET DIST PLOT SETUP
 g = gplot.get_single_plotter(
   chain_dir=chaindir,
